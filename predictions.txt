@@ -1,0 +1,22 @@
+2017-02-13 Next Game Predictions:
+
+Portland Trail Blazers: LOSE
+--bias: 35%
+-current streak: W L L W L
+
+Dallas Mavericks: LOSE
+--bias: 47%
+-current streak: L L W W L
+
+Utah Jazz: LOSE
+--bias: 23%
+-current streak: W W L L L
+
+Boston Celtics: WIN
+--bias: 83%
+-current streak: W L W W W
+
+NY Knicks: LOSE
+--bias: 35%
+-current streak: L L L L W
+2017-02-14 Next Game Predictions:
