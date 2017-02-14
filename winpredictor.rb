@@ -34,7 +34,7 @@ end
 # celtics = Winpredictor.new("Celtics", ["l","l","l","w","w"])
 # celtics.determine_win_chance
 # p celtics.make_prediction
-=begin
+
 nba = {
   "Portland Trail Blazers" => ["w","l","l","w","l"],
   "Dallas Mavericks" => ["l","l","w","w","l"],
@@ -52,4 +52,3 @@ nba.each do |team, last_5|
   File.open("predictions.txt", 'a') {|f| f.write(this_team.make_prediction) }
 
 end
-=end
