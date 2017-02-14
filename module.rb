@@ -1,18 +1,18 @@
 module Calc
   def add
-    @result = {"add" => @values.inject {|result, item| result.to_i + item.to_i}}
+    @result = {"Add" => @values.inject {|result, item| result.to_i + item.to_i}}
   end
 
   def subtract
-    @result = {"subtract" => @values.inject {|result, value| result.to_i - value.to_i}}
+    @result = {"Subtract" => @values.inject {|result, value| result.to_i - value.to_i}}
   end
 
   def multiply
-    @result = {"multiply" => @values.inject {|result, value| result.to_i * value.to_i}}
+    @result = {"Multiply" => @values.inject {|result, value| result.to_i * value.to_i}}
   end
 
   def divide
-    @result = {"divide" => @values.inject {|result, value| result.to_f / value.to_i}}
+    @result = {"Divide" => @values.inject {|result, value| result.to_f / value.to_i}}
   end
 end
 
@@ -24,15 +24,17 @@ class Operator
   end
   include Calc
 
-  def pre(result)
-    puts "#{@values} #{@result.each {|operation, value| puts "#{operation} #{value}"}}"
+  def display_results(result)
+    result.each {|operation, result| "#{operation} operation produced: #{result}"}
   end
 end
 
+=begin
 quiz = Operator.new("12 33 2 88 5 9")
 
-p quiz.values
-quiz.add.each {|operation, result| puts "#{operation}: #{result}"}
-quiz.subtract.each {|operation, result| puts "#{operation}: #{result}"}
-quiz.multiply.each {|operation, result| puts "#{operation}: #{result}"}
-quiz.divide.each {|operation, result| puts "#{operation}: #{result}"}
+puts "The numbers are: " + quiz.values.join(" ")
+quiz.display_results(quiz.add)
+quiz.display_results(quiz.subtract)
+quiz.display_results(quiz.multiply)
+quiz.display_results(quiz.divide)
+=end
